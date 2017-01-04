@@ -66,7 +66,7 @@ UI не должен лочиться.
 - стабильность и производительность
 - самостоятельность при написании кода
 
-![Screen Shot 2017-01-03 at 11.56.31.png](https://bitbucket.org/repo/pE7R55/images/2935971817-Screen%20Shot%202017-01-03%20at%2011.56.31.png)
+![apiary.png](https://github.com/Gorniv/ApiarySim/blob/master/apiary.png)
 
 **Оцените свой результат** (сколько бы вы поставили себе баллов, в %): 
 
