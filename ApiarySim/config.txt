@@ -1,0 +1,19 @@
+﻿{
+  "DataFileName": "dataFile.txt",
+  "ConfigFileName": "config.txt",
+  "HivesCount": 1300,
+  "MinWorkerInsideTime": 10,
+  "MaxWorkerInsideTime": 500,
+  "MinWorkerHoneyTime": 10,
+  "MaxWorkerHoneyTime": 500,
+  "MaxWorkerTry": 2,
+  "MinGuardCheckTime": 10,
+  "MaxGuardCheckTime": 500,
+  "MinWorkers": 100,
+  "MaxWorkers": 700,
+  "MinGuards": 10,
+  "MaxGuards": 70,
+  "MinQueen": 100,
+  "MaxQueen": 1000,
+  "LoadFromCache" : true
+}

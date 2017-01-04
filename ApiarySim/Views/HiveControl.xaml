@@ -1,0 +1,54 @@
+﻿<UserControl
+    x:Class="ApiarySim.Views.HiveControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ApiarySim.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+    <Grid
+        Width="230"
+        Margin="5"
+        Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Style="{StaticResource TitleHiveStyle}" Text="Hive #" />
+            <TextBlock Style="{StaticResource TitleHiveStyle}" Text="{Binding Number}" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="Amount of honey in hive:" />
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="{Binding Honey}" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="Total number of bees:" />
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="{Binding TotalBees}" />
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="Number of bees inside hive:" />
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="{Binding InsidesCount}" />
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="Worker bees:" />
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="{Binding WorkersCount}" />
+        </StackPanel>
+        <StackPanel Grid.Row="5" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="Queens:" />
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="{Binding Queens.Count}" />
+        </StackPanel>
+        <StackPanel Grid.Row="6" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="Guards:" />
+            <TextBlock Style="{StaticResource HiveDescStyle}" Text="{Binding Guards.Count}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

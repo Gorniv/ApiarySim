@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="ApiarySim.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:interop="using:Windows.UI.Xaml.Interop"
+    xmlns:local="using:ApiarySim"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:ApiarySim.Views"
+    Name="MainWindow"
+    d:DesignWidth="1024"
+    
+    mc:Ignorable="d">
+    
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <views:MainMenuControl Grid.Row="0" />
+        <Grid Grid.Row="1">
+            <ListView
+                ItemsSource="{Binding Hives}"
+                ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                ScrollViewer.HorizontalScrollMode="Enabled"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                ScrollViewer.VerticalScrollMode="Disabled"
+                SelectedItem="{Binding SelectedHive, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <views:HiveControl />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+</Page>
